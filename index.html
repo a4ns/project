@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1020">
+  <meta name="description" content="A five-level cooperative circuit puzzle for two players sharing one keyboard. Move together. Switch together. Escape together.">
+  <title>CIRCUIT · Two minds. One way out.</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <p class="eyebrow">LOCAL CO-OP · ONE KEYBOARD · FIVE LEVELS</p>
+      <h1>CIRCUIT</h1>
+      <p class="subtitle">Two minds. One way out.</p>
+    </header>
+    <section class="game-stage" aria-label="Cooperative circuit puzzle">
+      <canvas id="game" width="960" height="640" tabindex="0" role="application" aria-label="CIRCUIT game. Press Enter to start. Player one moves with W A S D. Player two switches circuits A, B and C with J, K and L. R restarts the current level. Leaving this window pauses the game; Enter resumes." aria-describedby="controls">
+        Your browser needs Canvas support to play CIRCUIT.
+      </canvas>
+    </section>
+    <footer class="game-footer" id="controls">
+      <p><strong>RUNNER</strong> W A S D <span aria-hidden="true">·</span> <strong>OPERATOR</strong> J K L</p>
+      <p>Enter start / resume <span aria-hidden="true">·</span> R restart <span aria-hidden="true">·</span> Reach the exit together.</p>
+    </footer>
+    <noscript>Enable JavaScript to play. No account or internet connection is needed after the game loads.</noscript>
+  </main>
+  <script src="./src/levels.js"></script>
+  <script src="./src/renderer.js"></script>
+  <script src="./src/engine.js"></script>
+</body>
+</html>
