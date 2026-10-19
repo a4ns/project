@@ -21,3 +21,5 @@ Level checks load the actual `src/levels.js` when integrated; otherwise they are
 - Canvas content is visual; screen-reader equivalent gameplay is not implemented.
 
 Report actual executed checks separately from pending checks. Never call static, mocked or screenshot checks a completed playtest.
+
+Engine tests load `src/engine.js` after integration. Before integration, set `COOP_ENGINE_FILE` to a read-only checkout/snapshot of CORE's engine. They exercise the actual deterministic engine API with synthetic fixtures (not DOM events): repeat suppression, diagonal speed, solid collisions, pause/held-key clearing, dangerous switching, reset semantics and win/new-game timing. These do not replace actual keyboard testing.
